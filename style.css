@@ -1,0 +1,286 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #E1EDE6; 
+    height: 6.5rem;
+    width: 100%;
+}
+.header-content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+.logo{
+    height: 2rem;
+    width: auto;
+    margin-right: 25%;
+}
+.nav{
+    width: 30rem;
+    font-size: 1.25rem;
+    font-weight: 450;
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.nav ul li a{
+    color: #2C2D35;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.nav ul li a:hover{
+    color: #598D66;
+}
+
+
+
+.hero-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+.hero-text h1{
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    font-weight: 450;
+}
+.hero-content p{
+    margin-bottom: 3.5rem;
+    color: #86928B;
+    font-weight: 500;
+}
+.green-text{
+    color: #4a925c;
+}
+.hero-text{
+    max-width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero-text > button{
+    border: 1px solid #598D66;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Плавное изменение */
+}
+.hero-text > button:hover{
+    background-color: #598D66;
+    color: white;
+}
+.production{
+    width: 40%;
+    height: 4rem;
+    color: #598D66;
+    font-size: 1.2rem;
+    border-radius: 0px;
+    background-color: white;
+    border: 1px solid transparent;
+    font-weight: 500;
+}
+
+
+.nav-catalog{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.nav-catalog .nav-country{
+    display: flex;
+    gap: 1rem;
+}
+.country-btn{
+    background-color: #D4E8D9; 
+    border-radius: 20px; 
+    padding: 0.6rem 1.5rem; 
+    font-size: 20px;
+    text-align: center;
+    border: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+.country-btn:hover, .country-btn.active:hover{
+    background-color: #598D66;
+    color: white;
+}
+.country-btn.active{
+    background-color: #376B44;
+    color: white;
+}
+.nav-catalog-text{
+    font-size: 2.5rem;
+}
+
+.cards-painting {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+    padding: 0; 
+    margin: 0 auto; 
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 2rem;
+}
+.painting{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 750px; 
+}
+.card-painting{
+    width: 100%;
+    max-height: 422px;
+    margin-bottom: 20px;
+}
+.artist-name{
+    color: #86928B;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.painting-name{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.type-of-painting{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.price{
+    font-size: 24px;
+    font-weight: 500;
+    color: #598D66;
+    margin-bottom: 20px;
+}
+.in-basket{
+    background: transparent;
+    padding: 1.2rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    color: #598D66;
+    border: 1px solid #598D66;
+    font-size: 20px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+.in-basket:hover{
+    background-color: #598D66;
+    color: white;
+}
+.cards-painting > div{
+    background-color: #E1EDE6;
+    height: 43rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 30px 20px;
+}
+
+
+a:hover{
+    color: #598D66;
+}
+
+
+/* Медиа-запрос для экранов меньше 720px */
+@media (max-width: 720px) {
+    .cards-painting {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки вместо 3 */
+        gap: 1rem; /* Меньший отступ */
+    }
+}
+
+/* Медиа-запрос для экранов меньше 480px (мобильные устройства) */
+@media (max-width: 480px) {
+    .cards-painting {
+        grid-template-columns: 1fr; /* 1 колонка */
+        justify-items: center;
+    }
+}
+/* Медиа-запрос для экранов меньше 768px (планшеты) */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Навигация в колонку */
+        height: auto; /* Автоматическая высота */
+        padding: 1rem 0;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center; /* Центрирование логотипа и меню */
+    }
+
+    .nav {
+        width: 100%; /* Растягивание навигации */
+        margin-top: 1rem;
+    }
+
+    .nav ul {
+        flex-direction: column; /* Вертикальное меню */
+        align-items: center;
+        gap: 1rem; /* Отступы между пунктами */
+    }
+
+    .hero-content {
+        flex-direction: column; /* Столбцовое отображение */
+        text-align: center; /* Центрирование текста */
+        gap: 1rem; /* Отступы между элементами */
+        padding: 0 1rem; /* Добавление отступов */
+    }
+
+    .hero-img img {
+        max-width: 100%; /* Уменьшение изображения */
+        height: auto;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem; /* Уменьшение размера заголовка */
+    }
+
+    .production {
+        width: auto; /* Кнопка растягивается */
+    }
+}
+
+/* Медиа-запрос для экранов меньше 480px (мобильные устройства) */
+@media (max-width: 480px) {
+    .cards-painting {
+        grid-template-columns: 1fr; /* Одна колонка карточек */
+        gap: 1rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem; /* Ещё меньше размер текста */
+    }
+
+    .country {
+        padding: 0.4rem 1rem; /* Уменьшение отступов кнопок стран */
+        font-size: 1rem; /* Меньший текст */
+    }
+}
+
+
