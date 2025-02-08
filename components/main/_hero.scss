@@ -1,0 +1,42 @@
+@use '../../utils/variables' as v;
+@use '../../utils/mixins' as m;
+
+.hero-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 5rem;
+    p{
+        margin-bottom: 3.5rem;
+        color: v.$text-color-p;
+    }
+}
+.green-text{
+    color: v.$primary-color;
+}
+.hero-text{
+    max-width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1{
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+        font-weight: 450;
+    }
+    button{
+        @include m.button-styles(transparent, v.$color-hover);
+        width: 50%;
+    }
+}
+.production{
+    width: 40%;
+    height: 4rem;
+    color: v.$color-hover;
+    font-size: 1.2rem;
+    border-radius: 0px;
+    background-color: white;
+    border: 1px solid transparent;
+    font-weight: 500;
+}

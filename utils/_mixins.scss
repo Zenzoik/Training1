@@ -1,0 +1,36 @@
+@use 'variables' as v;
+@mixin media-max($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin button-styles($bg-color, $hover-color) {
+    background: transparent;
+    padding: 1.2rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    color: v.$color-hover;
+    border: 1px solid v.$color-hover;;
+    font-size: 20px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    &:hover{
+        background-color: v.$color-hover;
+        color: white;
+    }
+}
+@mixin button-styles-banner($bg-color, $hover-color) {
+    background: $bg-color;
+    padding: 1.2rem 1rem;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid transparent;
+    font-size: 20px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+
+    &:hover {
+        background-color: $hover-color;
+        color: white;
+    }
+}

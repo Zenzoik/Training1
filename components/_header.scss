@@ -1,0 +1,41 @@
+@use '../utils/variables' as v;
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: v.$background-color; 
+    height: 6.5rem;
+    width: 100%;
+}
+.header-content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+.logo{
+    height: 2rem;
+    width: auto;
+    margin-right: 25%;
+}
+.nav{
+    width: 30rem;
+    font-size: 1.25rem;
+    font-weight: 450;
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        li{
+            a{
+                color: v.$text-color-nav;
+                text-decoration: none;
+                transition: color 0.3s ease;
+                &:hover{
+                    color: v.$color-hover;
+                }
+            }
+        }
+    }
+}

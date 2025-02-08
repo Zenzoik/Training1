@@ -1,0 +1,89 @@
+@use "../utils/variables" as v;
+@use "../utils/mixins" as m;
+
+// Брейкпоинты для адаптивности
+$breakpoint-lg: 1200px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 480px;
+
+@include m.media-max($breakpoint-lg) {
+    .main-content {
+        padding: 0 1rem; // Уменьшаем боковые отступы
+    }
+
+    .cards-painting {
+        grid-template-columns: repeat(2, 1fr); // 2 карточки вместо 3
+    }
+}
+
+@include m.media-max($breakpoint-md) {
+    .header-container {
+        flex-direction: column;
+        padding: 1rem;
+        height: auto;
+    }
+
+    .nav {
+        ul {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 1rem;
+
+        .hero-img {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .hero-text {
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    .cards-painting {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@include m.media-max($breakpoint-sm) {
+    .nav {
+        ul {
+            gap: 0.25rem;
+        }
+    }
+
+    .hero-content {
+        gap: 0.5rem;
+
+        .hero-text {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .cards-painting {
+        grid-template-columns: 1fr; // Одна карточка в ряд
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+
+        .footer-right, .footer-left {
+            margin: 0 auto;
+        }
+    }
+}

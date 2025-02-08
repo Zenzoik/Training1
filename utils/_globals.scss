@@ -1,0 +1,6 @@
+@use 'variables' as v;
+%text-styles {
+    font-size: 18px;
+    line-height: 27px;
+    color: v.$text-color-nav;
+}

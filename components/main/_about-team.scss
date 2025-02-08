@@ -1,0 +1,37 @@
+@use '../../utils/variables' as v;
+.about-team{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 70px;
+    img{
+        max-width: 445px;
+        max-height: 440px;
+    }
+}
+.about-team-text{
+    padding-top: 123px;
+}
+.photo-group{
+    img{
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 30px;
+    }
+}
+
+.about-team-text{
+    h3{
+        font-size: 40px;
+        line-height: 44px;
+        margin-bottom: 20px;
+        color: v.$text-color-nav;
+    }
+    p{
+        font-size: 18px;
+        line-height: 27px;
+        margin-bottom: 20px;
+        color: v.$text-color-nav;
+    }
+}
