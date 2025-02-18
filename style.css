@@ -1,4 +1,15 @@
-@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+
+html body {
+  overflow-x: hidden;
+}
+
 footer {
   background-color: #E1EDE6;
   width: 100%;
@@ -31,18 +42,30 @@ footer p {
   display: flex;
   width: 100%;
 }
-
-.footer-about {
+.footer-right .footer-about {
   display: flex;
   margin-right: auto;
 }
-
-.footer-column {
+.footer-right .footer-about .footer-column {
   margin-right: 60px;
   transition: color 0.5s ease;
   cursor: pointer;
 }
-.footer-column p {
+.footer-right .footer-about .footer-column ul {
+  list-style: none;
+}
+.footer-right .footer-about .footer-column ul li {
+  margin-bottom: 6px;
+}
+.footer-right .footer-about .footer-column ul li a {
+  text-decoration: none;
+  color: #86928B;
+  transition: color 0.5s ease;
+}
+.footer-right .footer-about .footer-column ul li a:hover {
+  color: #598D66;
+}
+.footer-right .footer-about .footer-column p {
   margin-bottom: 6px;
 }
 
@@ -120,19 +143,9 @@ footer p {
   max-width: 445px;
   max-height: 440px;
 }
-
 .about-team-text {
   padding-top: 123px;
 }
-
-.photo-group img {
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 30px;
-}
-
 .about-team-text h3 {
   font-size: 40px;
   line-height: 44px;
@@ -146,6 +159,14 @@ footer p {
   color: #2C2D35;
 }
 
+.photo-group img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 30px;
+}
+
 .banner {
   background-image: url("/images/background/Rectangle.png");
   height: 575px;
@@ -156,16 +177,15 @@ footer p {
   position: relative;
 }
 .banner::after {
-  content: ""; /* Обязательное свойство для псевдоэлемента */
-  position: absolute; /* Абсолютное позиционирование */
+  content: "";
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); /* Чёрный цвет с прозрачностью 70% */
-  z-index: 1; /* Затемнение ниже текста */
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
-
 .banner-content {
   position: relative;
   max-width: 1200px;
@@ -189,6 +209,9 @@ footer p {
   margin-bottom: 20px;
 }
 
+.promo {
+  margin-bottom: 70px;
+}
 .promo-btn {
   background: #EEDB6D;
   padding: 1.2rem 1rem;
@@ -204,19 +227,19 @@ footer p {
   color: white;
 }
 
-.promo {
-  margin-bottom: 70px;
-}
-
 .nav-catalog {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-.nav-catalog .nav-country {
+.nav-catalog ul {
   display: flex;
   gap: 1rem;
+  list-style: none;
+}
+.nav-catalog-text {
+  font-size: 2.5rem;
 }
 
 .country-btn {
@@ -237,10 +260,6 @@ footer p {
   color: white;
 }
 
-.nav-catalog-text {
-  font-size: 2.5rem;
-}
-
 .cards-painting {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -251,20 +270,19 @@ footer p {
   box-sizing: border-box;
   margin-top: 2rem;
 }
-.cards-painting div {
+.cards-painting article {
   background-color: #E1EDE6;
   height: 43rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 20px 20px 30px 20px;
-}
-
-.painting {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   min-height: 750px;
+}
+.cards-painting article h3 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 
 .card-painting {
@@ -278,12 +296,6 @@ footer p {
   font-weight: 500;
   margin-bottom: 10px;
   font-size: 18px;
-}
-
-.painting-name {
-  font-size: 30px;
-  font-weight: 500;
-  margin-bottom: 8px;
 }
 
 .type-of-painting {
@@ -315,7 +327,7 @@ footer p {
   color: white;
 }
 
-.catalog {
+section {
   margin-bottom: 70px;
 }
 
@@ -432,18 +444,6 @@ footer p {
     margin: 0 auto;
   }
 }
-* {
-  padding: 0;
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-  box-sizing: border-box;
-  font-weight: 500;
-}
-
-html body {
-  overflow-x: hidden;
-}
-
 .main-content {
   display: flex;
   flex-direction: column;
@@ -452,3 +452,5 @@ html body {
   padding: 0 2rem;
   width: 100%;
 }
+
+/*# sourceMappingURL=style.css.map */
