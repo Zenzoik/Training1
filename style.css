@@ -10,19 +10,18 @@ html body {
   overflow-x: hidden;
 }
 
-footer {
+.footer {
   background-color: #E1EDE6;
   width: 100%;
 }
-footer h4 {
+.footer h4 {
   font-size: 20px;
   margin-bottom: 8px;
 }
-footer p {
+.footer p {
   font-size: 18px;
   color: #86928B;
 }
-
 .footer-container {
   display: flex;
   padding: 23px 0;
@@ -30,14 +29,12 @@ footer p {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .footer-left {
   margin-right: 115px;
 }
 .footer-left img {
   margin-bottom: 35px;
 }
-
 .footer-right {
   display: flex;
   width: 100%;
@@ -68,7 +65,6 @@ footer p {
 .footer-right .footer-about .footer-column p {
   margin-bottom: 6px;
 }
-
 .footer-icons {
   margin-bottom: 20px;
 }
@@ -78,18 +74,12 @@ footer p {
   transition: color 0.5s ease;
   cursor: pointer;
 }
-
 .footer-social p {
   font-size: 12px;
   line-height: 120%;
   margin-bottom: 6px;
 }
-
-.footer-column p:hover {
-  color: #598D66;
-}
-
-.footer-icons i:hover {
+.footer-column p:hover, .footer-icons p:hover {
   color: #598D66;
 }
 

@@ -1,6 +1,6 @@
 @use '../utils/variables' as v;
 
-footer{
+.footer{
     background-color: v.$background-color;
     width: 100%;
     h4{
@@ -11,76 +11,68 @@ footer{
         font-size: 18px;
         color: v.$text-color-p;
     }
-    
-}
-//Почему не работает вложенность?
-.footer-container{
-    display: flex;
-    padding: 23px 0;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.footer-left{
-    margin-right: 115px;
-    img{
-        margin-bottom: 35px;
-    }
-}
-.footer-right{
-    display: flex;
-    width: 100%;
-    .footer-about{
+    &-container{
         display: flex;
-        margin-right: auto;
-        .footer-column{
-            margin-right: 60px;
-            transition: color 0.5s ease;
-            cursor: pointer;
-            ul{
-                list-style: none;
-                li{
-                    margin-bottom: 6px;
-                    a{
-                        text-decoration: none;
-                        color: v.$text-color-p;
-                        transition: color 0.5s ease;
-                        &:hover{
-                            color: v.$color-hover;
+        padding: 23px 0;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    &-left{
+        margin-right: 115px;
+        img{
+            margin-bottom: 35px;
+        }
+    }
+    &-right{
+        display: flex;
+        width: 100%;
+        .footer-about{
+            display: flex;
+            margin-right: auto;
+            .footer-column{
+                margin-right: 60px;
+                transition: color 0.5s ease;
+                cursor: pointer;
+                ul{
+                    list-style: none;
+                    li{
+                        margin-bottom: 6px;
+                        a{
+                            text-decoration: none;
+                            color: v.$text-color-p;
+                            transition: color 0.5s ease;
+                            &:hover{
+                                color: v.$color-hover;
+                            }
                         }
                     }
                 }
-            }
-            p{
-                margin-bottom: 6px;
+                p{
+                    margin-bottom: 6px;
+                }
             }
         }
     }
-}
-
-.footer-icons{
-    margin-bottom: 20px;
-    i{
-        margin-right: 30px;
-        font-size: 24px;
-        transition: color 0.5s ease;
-        cursor: pointer;
+    &-icons{
+        margin-bottom: 20px;
+        i{
+            margin-right: 30px;
+            font-size: 24px;
+            transition: color 0.5s ease;
+            cursor: pointer;
+        }
     }
-}
-.footer-social{
-    p{
-        font-size: 12px;
-        line-height: 120%;
-        margin-bottom: 6px;
+    &-social{
+        p{
+            font-size: 12px;
+            line-height: 120%;
+            margin-bottom: 6px;
+        }
     }
-}
-.footer-column{
-    p:hover{
-        color: v.$color-hover;
-    }
-}
-.footer-icons{
-    i:hover{
-        color: v.$color-hover;
+    &-column, &-icons{
+        p:hover{
+            color: v.$color-hover;
+        }
     }
 }
